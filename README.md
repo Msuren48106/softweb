@@ -29,289 +29,748 @@ Publish the website in the given URL.
 
 ## PROGRAM:
 ```
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Royalreader Private Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>ROYALREADER PRIVATE LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitemselected"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitem"><a href="/static/products.html"><b>Products</b></a></div>
-        <div class="menuitem"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitem"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <div class="content">
-        <div class="homecontent">
-          <h1>About Us</h1>
-          <img src="./img/books.jpg" alt="Building" />
-          <div class="contenttext">
-            India has been pioneering quality publishing for teachers and institutions. The passion to transform lives is at the centre of our ideology. Royalreader textbooks, developed by leading academicians and practicing teachers are research-based, learner-centric and are the first choice of over 15,000 institutes pan India. Our resources lead the teaching-learning through new methodologies, and sound teaching practices that inspire learners to achieve more through engaging digital and print content.
-            <br>
-            <br>
-            pringer Nature Group, a global and progressive business that opens doors to discovery. Our 500 passionate team members are spread over 26 offices in India. Over 15 million learners use our learning resources, which include 200 new titles every year. Over 50,000 teachers receive professional development inputs from us.
+home.html
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Web Development Company </title>
+        <style type="text/css"> 
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .banner {
+                width: 100%;
+                height: 100vh;
+                background-image:url(web.webp);
+                background-size: cover;
+                background-position: center;
+            }
+            .navbar {
+                width: 85%;
+                margin: auto;
+                padding: 35px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo {
+                color: #6fa1f8;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: 3px;
+            }
+            span {
+                color: white;
+            }
+            form {
+                width: 300px;
+                height: 40px;
+                display: flex;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 1px 1px;
+                font-size: 15px;
+                border-radius: 10px;
+                backdrop-filter: blur(4px) saturate(180%);
+            }
+            form input {
+                background: transparent;
+                flex: 1;
+                border: 0;
+                outline: none;
+                padding: 12px 20px;
+                font-size: 15px;
+                color: white;
+            } 
+            ::placeholder {
+                color: white;
+            }
+            form button {
+                border: 0;
+                outline: none;
+                padding: 5px 20px;
+                color: white;
+                border-radius: 10px;
+                background: #6fa1f8;
+                cursor: pointer;
+            }
+            .navbar li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+            }
+            .navbar li a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+            .navbar li:hover {
+                border: 1px;
+                padding: 10px;
+                color: white;
+                background-color: #6fa1f8;
+                transition: 0.5s; 
+                cursor: pointer;
+                border-radius: 30px;
+            }
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+            }
+            .text h2 {
+                color: white;
+                font-weight: 800;
+                font-size: 50px;
+                letter-spacing: 3px;
+            }
+            .text p {
+                color: white;
+                text-transform: capitalize;
+                font-size: 15px;
+                margin-bottom: 30px;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+            }
+            .login {
+                margin: 0px 10px;
+                border: 2px solid #6fa1f8;
+                padding: 13px 35px;
+                letter-spacing: 1px;
+                color: white;
+                border-radius: 30px;
+                background-color: #6fa1f8;
+                text-decoration: none;
+            }
+            .login:hover {
+                border: 2px solid #6fa1f8;
+                color: #6fa1f8;
+                background-color: white;
+                transition: 0.5s;
+                cursor: pointer;
+            } 
+            .signup {
+                margin: 0px 10px;
+                border: 2px solid #6fa1f8;
+                padding: 13px 35px;
+                letter-spacing: 1px;
+                color: white;
+                border-radius: 30px;
+                background-color: #6fa1f8;
+                text-decoration: none;
+            }
+            .signup:hover {
+                border: 2px solid #6fa1f8;
+                color: #6fa1f8;
+                background-color: white;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            footer {
+                background-color: #ffffff;
+                margin-top: auto;
+            }
+        </style>
+    </head>
+<body>
+    <div class="banner">
+        <br>
+        <div class="navbar">
+            <h1 class="logo">G<span>T</span> T<span>ECH</span></h1>
             <ul>
-              <li>Simple to learn, easier to use</li>
-              <li>Insightful , actionable & customizable reports</li>
-              <li>Anywhere, anytime and secure access</li>
+                <li><a href="home.html"> Home </a></li>
+                <li><a href="product.html"> Products </a></li>
+                <li><a href="people.html"> People </a></li>
+                <li><a href="contact.html"> Contact </a></li>
             </ul>
-          </div>
+            <form action="" method="get">
+                <input type="text" placeholder="Enter to Search">
+                <button type="submit"> Search </button>
+            </form>
         </div>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2022 Royalreader Private Limited, Developed by Surendhar K.
-      </div>
-    </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Royalreader Private Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>ROYALREADER PRIVATE LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitemselected">
-          <a href="/static/products.html"><b>Products</b></a>
-        </div>
-        <div class="menuitem"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitem"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <div class="content">
-        <div class="productcontent">    
-          <h1>Our Premium Products</h1>
-          <div class="productitems">
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/bennett.jpg" alt="product image">
-                  </div>
-                  <div class="itemname">The Vanishing Half</div>
-                  <div class="itemprice">Price: Rs.4799.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/divergent.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">Divergent</div>
-                  <div class="itemprice">Price: Rs.5299.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/code.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">The da vinci code</div>
-                  <div class="itemprice">Price: Rs.5000.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/gaiman.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">American Gods</div>
-                  <div class="itemprice">Price: Rs.5899.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/hater.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">The Hate You Give</div>
-                  <div class="itemprice">Price: Rs.6299.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/hoover.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">Verity</div>
-                  <div class="itemprice">Price: Rs.5699.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/kazuo.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">Klara and the Sun</div>
-                  <div class="itemprice">Price: Rs.5199.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/mexican.jpg"  alt="product image">
-                  </a>
-                  </div>
-                  <div class="itemname">Mexican Gothic</div>
-                  <div class="itemprice">Price: Rs.5499.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/ocean.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">On Earth We're Briefly Gorgeous</div>
-                  <div class="itemprice">Price: Rs.6399.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/roses.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">A Court Of Thorns And Roses</div>
-                  <div class="itemprice">Price: Rs.7199.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/seven.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">The Seven Husbands Of Evenly Hugo</div>
-                  <div class="itemprice">Price: Rs.7499.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/stephen.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">The Shining</div>
-                  <div class="itemprice">Price: Rs.6999.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/Six-of-Crows.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">Six Of Crows</div>
-                  <div class="itemprice">Price: Rs.7999.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/turtles.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">Turtles All The Way Down</div>
-                  <div class="itemprice">Price: Rs.7499.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/whitehead.jpg"  alt="product image">
-                  </div>
-                  <div class="itemname">The Underground Railground</div>
-                  <div class="itemprice">Price: Rs.7799.00 </div>
-              </div>
-          </div>
-          </div>        
-      </div>
-      <div class="footer">
-        Copyright &#169; 2022 Royalreader Private Limited, Developed by Surendhar K.
-      </div>
-    </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Royalreader Private Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>ROYALREADER PRIVATE LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitem"><a href="/static/products.html"><b>Products</b></a></div>
-        <div class="menuitemselected"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitem"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <body>
-          <div class="content">
-              <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Our Proud Management Crew!!!</h2>
-              <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/chairman.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Lee Yung (Chairman)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/head1.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  John Nickson (Head Executive)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/head2.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Albert Rio (Head Executive)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/manager1.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Maddy Nelson (Manager)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/manager2.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Remi Juliet (Manager)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/deputy.jpeg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Max Mysterio (Deputy Manager)</h2></centre>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 Royalreader Private Limited, Developed by Surendhar K.
-      </div>
-    </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Royalreader Private Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>ROYALREADER PRIVATE LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitem"><a href="/static/products.html"><b>Products</b></a></div>
-        <div class="menuitem"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitemselected"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <body>
-          <div class="content">
-          <h1>&ensp;Contact Information</h1>
-                    <p><b>&emsp;Here are the details listed below. Do contact us for any need</b></p>
-                    <p><b>&emsp;&ensp;Address:</b>
-                         No:98, king street, Flyer Town, Texas, United States
-                    </p>
-                    <ul>
-                        <br>
-                        <li><b>&emsp;Phone:</b>&emsp;2387459648</li>
-                        <br>
-                        <li><b>&emsp;Shop owner no</b>:&emsp;9586456745</li>
-                        <br>
-                        <li><b>&emsp;Shop Manager Number:</b> 8975455185</li>
-                        <br>
-                        <li><b>&emsp;Email Id:</b>&emsp;royalreader74@gmail.com</li>
-                        <br>
-                        <li><b>&emsp;Alternate Email Id:</b>&emsp;royalreader89@gmail.com</li>
-                        <br>
-                    </ul>
+        <div class="content">
+            <div class="text">
+                <h2> Web Development Company </h2>
+                <br>
+                <p> Welcome to GT TECH, the forefront of digital innovation and specialized in crafting tailored web solutions to elevate businesses to new heights in the digital sphere. </p>
+                <br>
+                <div>
+                    <a href="#" class="login"> Log In </a>
+                    <a href="#" class="signup"> Sign Up </a>
                 </div>
-          </div>
-          </div>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 Royalreader Private Limited, Developed by Surendhar K.
-      </div>
+            </div>
+        </div>  
     </div>
-  </body>
+    <footer>
+        <center> Copyright c 2024 by M.suren </center>
+    </footer>
+</body>
+</html>
+
+product.html
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Product Page </title>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-image:url(web.webp);
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bg-product {
+        border: 1px;
+        padding: 10px;
+        color: white;
+        background-color: #6fa1f8;
+        border-radius: 30px;
+    }
+    .logo {
+        color: #6fa1f8;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    span {
+        color: white;
+    }
+    form {
+        width: 300px;
+        height: 40px;
+        display: flex;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1px 1px;
+        font-size: 15px;
+        border-radius: 10px;
+        backdrop-filter: blur(4px) saturate(180%);
+    }
+    form input {
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 12px 20px;
+        font-size: 15px;
+        color: white;
+    } 
+    ::placeholder {
+        color: white;
+    }
+    form button {
+        border: 0;
+        outline: none;
+        padding: 5px 20px;
+        color: white;
+        border-radius: 10px;
+        background: #6fa1f8;
+        cursor: pointer;
+    }
+    .navbar li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+    .navbar li a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+    .navbar li:hover {
+        border: 1px;
+        padding: 10px;
+        color: white;
+        background-color: #6fa1f8;
+        transition: 0.5s; 
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    .container {
+        background: transparent;
+        padding: 10px 5%;
+        padding-bottom: 100px;
+    }
+    .container .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 20px;
+    }
+    .container .box-container .box {
+        color: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+        border-radius: 20px;
+        background: transparent;
+        border: 1px solid white;
+        padding: 30px 20px;
+    }
+    .container .box-container .box img {
+        height: 70px;
+        border-radius: 20px;
+    }
+    .container .box-container .box h2 {
+        color: #6fa1f8;
+        font-size: large;
+        padding: 10px 0;
+    }
+    .container .box-container .box p {
+        color: white;
+        font-size: small;
+        line-height: 1.5;
+    }
+    footer {
+        background-color: #ffffff;
+        margin-top: auto;
+    }
+</style>
+</head>
+<body>
+<div class="banner">
+<br>
+<div class="navbar">
+    <h1 class="logo">G<span>T</span> T<span>ECH</span></h1>
+    <ul>
+        <li><a href="home.html"> Home </a></li>
+        <li><a href="product.html" class="bg-product"> Products </a></li>
+        <li><a href="people.html"> person </a></li>
+        <li><a href="contact.html"> Contact </a></li>
+    </ul>
+    <form action="" method="get">
+        <input type="text" placeholder="Enter to Search">
+        <button type="submit"> Search </button>
+    </form>
+</div>
+<center>
+    <h1 > <font color = "lightgreen"> OUR PROJECTS </font> </h1>
+<img src="product.jpg" height="500" width="800">
+</center>
+</div>
+<footer>
+    <center> Copyright c 2024 by M.suren </center>
+</footer>
+</body>
+</html>
+
+people.html
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> people page </title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .banner {
+                width: 100%;
+                height: 100vh;
+                background-image:url(web.webp);
+                background-size: cover;
+                background-position: center;
+            }
+            .navbar {
+                width: 85%;
+                margin: auto;
+                padding: 35px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .bg-people {
+                border: 1px;
+                padding: 10px;
+                color: white;
+                background-color: #6fa1f8;
+                border-radius: 30px;
+            }
+            .logo {
+                color: #6fa1f8;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: 3px;
+            }
+            span {
+                color: white;
+            }
+            form {
+                width: 300px;
+                height: 40px;
+                display: flex;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 1px 1px;
+                font-size: 15px;
+                border-radius: 10px;
+                backdrop-filter: blur(4px) saturate(180%);
+            }
+            form input {
+                background: transparent;
+                flex: 1;
+                border: 0;
+                outline: none;
+                padding: 12px 20px;
+                font-size: 15px;
+                color: white;
+            } 
+            ::placeholder {
+                color: white;
+            }
+            form button {
+                border: 0;
+                outline: none;
+                padding: 5px 20px;
+                color: white;
+                border-radius: 10px;
+                background: #6fa1f8;
+                cursor: pointer;
+            }
+            .navbar li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+            }
+            .navbar li a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+            .navbar li:hover {
+                border: 1px;
+                padding: 10px;
+                color: white;
+                background-color: #6fa1f8;
+                transition: 0.5s; 
+                cursor: pointer;
+                border-radius: 30px;
+            }
+            .image {
+                position: relative;
+                border: 0;
+                top: 70px;
+                background: transparent;
+            }
+            .image table {
+                border: 0;
+                color: white;
+                position: relative;
+                left: 150px;
+            }
+            .image table img {
+                height: 140px;
+                width: 140px;
+                border: 2px solid white;
+                padding: 5px;
+                border-radius: 50%;
+            }
+            .image table td {
+                color: #6fa1f8;
+            }
+            footer {
+                background-color: #ffffff;
+                margin-top: auto;
+            }
+        </style>
+    </head>
+<body>
+    <div class="banner">
+        <br>
+        <div class="navbar">
+            <h1 class="logo">G<span>T</span> T<span>ECH</span></h1>
+            <ul>
+                <li><a href="home.html"> Home </a></li>
+                <li><a href="product.html"> Products </a></li>
+                <li><a href="people.html" class="bg-people"> People </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+            </ul>
+            <form action="" method="get">
+                <input type="text" placeholder="Enter to Search">
+                <button type="submit"> Search </button>
+            </form>
+        </div>
+        <div class="image">
+            <table cellspacing="20"> 
+                <tr align="center">
+                    <td> <img src="mypic.png.jpg"> </td>
+                    <td> <img src="co.jpg"> </td>
+                    <td> <img src="dir.jpg"> </td>
+                    <td> <img src="ass.webp"> </td>
+                    <td> <img src="sec.jpg"> </td>
+                </tr>
+                <tr align="center">
+                    <th>  </th>
+                    <th>  </th>
+                    <th>  </th>
+                    <th>  </th>
+                    <th>  </th>                    
+                </tr>
+                <tr align="center">
+                    <td> CEO </td>
+                    <td> Co-Founder </td>
+                    <td> Director </td>
+                    <td> Asst. Director </td>
+                    <td> Secretary </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <center> Copyright c 2024 by M.suren </center>
+    </footer>
+</body>
+</html>
+
+contact.html
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Contact Page </title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .banner {
+                width: 100%;
+                height: 100vh;
+                background-image: url(web.webp);
+                background-size: cover;
+                background-position: center;
+            }
+            .navbar {
+                width: 85%;
+                margin: auto;
+                padding: 35px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .bg-contact {
+                border: 1px;
+                padding: 10px;
+                color: white;
+                background-color: #6fa1f8;
+                border-radius: 30px;
+            }
+            .logo {
+                color: #6fa1f8;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: 3px;
+            }
+            span {
+                color: white;
+            }
+            .navbar form {
+                width: 300px;
+                height: 40px;
+                display: flex;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 1px 1px;
+                font-size: 15px;
+                border-radius: 10px;
+                backdrop-filter: blur(4px) saturate(180%);
+            }
+            .navbar form input {
+                background: transparent;
+                flex: 1;
+                border: 0;
+                outline: none;
+                padding: 12px 20px;
+                font-size: 15px;
+                color: white;
+            } 
+            ::placeholder {
+                color: white;
+            }
+            .navbar form button {
+                border: 0;
+                outline: none;
+                padding: 5px 20px;
+                color: white;
+                border-radius: 10px;
+                background: #6fa1f8;
+                cursor: pointer;
+            }
+            .navbar li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+            }
+            .navbar li a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+            .navbar li:hover {
+                border: 1px;
+                padding: 10px;
+                color: white;
+                background-color: #6fa1f8;
+                transition: 0.5s; 
+                cursor: pointer;
+                border-radius: 30px;
+            }
+            .box {
+                display: flex;
+                column-gap: 40px;
+                background: transparent;
+                position: relative;
+                top: 50px;
+            }
+            .box-1 {
+                height: 400px;
+                width: 400px;
+                border: 3px solid white;
+                border-radius: 20px;
+                background: transparent;
+                position: relative;
+                left: 250px;
+            }
+            .box-2 {
+                height: 400px;
+                width: 400px;
+                border: 3px solid #6fa1f8;
+                border-radius: 20px;
+                background: transparent;
+                position: relative;
+                left: 300px;
+            }
+            .box-1 form {
+                display: flex;
+                color: white;
+                background: transparent;
+                padding: 10px;
+                font-size: 15px;
+                position: relative;
+                top: 15px;
+            }
+            .box-1 form input {
+                background: transparent;
+                display: flex;
+                border: 1px solid white;
+                border-radius: 10px;
+                padding: 15px 30px;
+                font-size: 15px;
+                color: white;
+                position: relative;
+                top: 30px;
+            }
+            .box-1 form textarea {
+                background: transparent;
+                color: white;
+                padding: 15px 10px;
+                position: relative;
+                top: 30px;
+                left: 30px;
+                border: 1px solid white;
+                border-radius: 10px;
+            }
+            .box-1 form button {
+                border: 0;
+                outline: none;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 30px;
+                background: #6fa1f8;
+                cursor: pointer;
+                position: relative;
+                top: 50px;
+            }
+            .box-2 h2 {
+                color: white;
+                position: relative;
+                top: 25px;
+                left: 50px;
+                font-size: 30px;
+            }
+            .box-2 p {
+                color: white;
+                position: relative;
+                top: 50px;
+                padding: 10px 80px;
+            }
+            .box-2 span {
+                color: #6fa1f8;
+                font-size: 20px;
+            }
+            footer {
+                background-color: #ffffff;
+                margin-top: auto;
+            }
+        </style>
+    </head>
+<body>
+    <div class="banner">
+        <br>
+        <div class="navbar">
+            <h1 class="logo">G<span>T</span> T<span>ECH</span></h1>
+            <ul>
+                <li><a href="home.html"> Home </a></li>
+                <li><a href="product.html"> Products </a></li>
+                <li><a href="people.html"> People </a></li>
+                <li><a href="contact.html" class="bg-contact"> Contact </a></li>
+            </ul>
+            <form action="" method="get">
+                <input type="text" placeholder="Enter to Search">
+                <button type="submit"> Search </button>
+            </form>
+        </div>
+        <div class="box">
+            <div class="box-1">
+                <form>
+                    <center>
+                        <h1> Contact Us </h1>
+                        <input type="text" placeholder="Your Name">
+                        <br>
+                        <input type="email" placeholder="Your Email">
+                        <br>
+                        <textarea rows="4" cols="40" placeholder="Your Message"> </textarea>
+                        <br>
+                        <button type="submit"> Submit </button>
+                    </center>
+                </form>
+            </div>
+            <div class="box-2"> 
+                <h2> Contact Info </h2>
+                <p> <span>Address</span> : 140 Tech Park Road
+                    Estancia IT Park, Chengalpattu
+                    Tamil Nadu 603202</p>
+                <p> <span>Email</span> : gamingthamizhan1006@gmail.com </p>
+                <p> <span>Phone</span> : 6589364520</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <center> Copyright c 2024 by M.suren </center>
+    </footer>
+</body>
 </html>
 ```
-
 ## OUTPUT:
-
-
-![alt text](<Screenshot 2024-05-06 105714.png>)
-![alt text](<Screenshot 2024-05-06 105749.png>)
-![alt text](<Screenshot 2024-05-06 105812.png>)
-![alt text](<Screenshot 2024-05-06 105812.png>)
-![alt text](<Screenshot 2024-05-06 105946.png>)
-![alt text](<Screenshot 2024-05-06 110014.png>)
-![alt text](<Screenshot 2024-05-06 110031.png>)
-![alt text](<Screenshot 2024-05-06 110049.png>)
-
+![alt text](<Screenshot (14).png>)
+![alt text](<Screenshot (15).png>)
+![alt text](<Screenshot (18).png>)
+![alt text](<Screenshot (19).png>)
 ## RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
